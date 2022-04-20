@@ -1,0 +1,42 @@
+* {
+    list-style-type: none;
+}
+
+.calc {
+    display: flex;
+    justify-content: center;
+
+    &__container {
+        border: 1px solid red;
+        width: 400px;
+        height: 600px;
+    }
+
+    &__screen {
+        border: 1px solid aqua;
+        padding: 20px;
+    }
+
+    &__container2 {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    &__keys {
+        display: flex;
+        justify-content: space-around;
+
+        border: 1px solid yellow;
+    }
+
+    &__button:hover {
+        cursor: pointer;
+    }
+}
+
+.stupid-font-awesome {
+    font-weight: 900;
+    font-size: 30px;
+
+}
