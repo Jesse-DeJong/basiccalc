@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'seven_segmentregular';
+    src: url('./seven_segment.woff2') format('woff2'),
+         url('./seven_segment.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 * {
     list-style-type: none;
 }
@@ -13,8 +22,12 @@
     }
 
     &__screen {
+        display: flex;
+        flex-direction: row-reverse;
+
         border: 1px solid aqua;
-        padding: 20px;
+        // padding: 20px;
+    
     }
 
     &__container2 {
@@ -35,7 +48,28 @@
     }
 }
 
-.stupid-font-awesome {
+#calc__screen {
+    &__readout {
+        margin-right: 10px;
+        font-size: 40px;
+        font-family: seven_segmentregular;
+    }
+
+    &__prev {
+        position: absolute;
+
+        margin: 1px 10px 0px 0px; /* N E S W */ 
+        font-size: 20px;
+        font-family: seven_segmentregular;
+    }
+}
+
+#clear {
+    background-color: red;
+    border-radius: 5px;
+}
+
+#stupid-font-awesome {
     font-weight: 900;
     font-size: 30px;
 
