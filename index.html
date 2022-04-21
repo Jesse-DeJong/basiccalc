@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
 <body>
-    <section class="calc">
+
+    <section id="calc" class="calc">
         <div class="calc__container">
             <div class="calc__screen">
                 <h3 id="calc__screen__prev"></h3>
@@ -39,7 +41,7 @@
                 </ul>
                 <ul class="calc__keys">
                     <!-- Row 4 -->
-                    <li class="calc__button" id="." class="stupid-font-awesome">.</li>
+                    <li class="calc__button stupid-font-awesome" id=".">.</li>
                     <li class="calc__button" id="0"><i class="fa-solid fa-0"></i></li>
                     <li class="calc__button" id="+"><i class="fa-solid fa-plus"></i></li>
                     <li class="calc__button" id="="><i class="fa-solid fa-equals"></i></li>
@@ -48,6 +50,7 @@
             </div>
         </div>
     </section>
+
 </body>
 <script src="./script.js"></script>
 </html>

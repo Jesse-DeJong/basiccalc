@@ -11,16 +11,20 @@
 .calc {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 900px;
 }
 .calc__container {
-  border: 1px solid red;
-  width: 400px;
-  height: 600px;
+  background-color: grey;
+  border-radius: 5px;
 }
 .calc__screen {
+  background-color: white;
+  margin: 10px 10px 5px 10px;
   display: flex;
-  flex-direction: row-reverse;
-  border: 1px solid aqua;
+  flex-direction: column;
+  align-items: flex-end;
+  height: 60px;
 }
 .calc__container2 {
   display: flex;
@@ -28,8 +32,21 @@
 }
 .calc__keys {
   display: flex;
-  justify-content: space-around;
-  border: 1px solid yellow;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 5px 0px 5px;
+}
+.calc__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  background-color: green;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  box-shadow: inset 0 0 0 7px rgba(255, 255, 255, 0.5);
+  margin: 2px;
 }
 .calc__button:hover {
   cursor: pointer;
@@ -41,7 +58,6 @@
   font-family: seven_segmentregular;
 }
 #calc__screen__prev {
-  position: absolute;
   margin: 1px 10px 0px 0px;
   /* N E S W */
   font-size: 20px;
@@ -51,9 +67,13 @@
 #clear {
   background-color: red;
   border-radius: 5px;
+  padding: 10px;
+  margin: 5px 10px;
+  box-shadow: inset 0 0 0 7px rgba(255, 255, 255, 0.5);
 }
 
-#stupid-font-awesome {
+.stupid-font-awesome {
   font-weight: 900;
   font-size: 30px;
+  font-family: seven_segmentregular;
 }

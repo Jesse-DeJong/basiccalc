@@ -4,30 +4,40 @@
          url('./seven_segment.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 * {
     list-style-type: none;
 }
 
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .calc {
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 900px;
 
     &__container {
-        border: 1px solid red;
-        width: 400px;
-        height: 600px;
+        background-color: grey;
+        border-radius: 5px;
+        // border: 1px solid red;
     }
 
     &__screen {
+        background-color: white;
+        margin: 10px 10px 5px 10px;
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: column;
+        align-items: flex-end;
 
-        border: 1px solid aqua;
-        // padding: 20px;
-    
+        height: 60px;
+
+        // border: 1px solid aqua;    
     }
 
     &__container2 {
@@ -38,9 +48,25 @@
 
     &__keys {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
+        align-items: center;
+        
+        margin: 0px 5px 0px 5px;
+        // border: 1px solid yellow;
+    }
 
-        border: 1px solid yellow;
+    &__button {
+        @include flexCenter;
+        font-size: 30px;
+        
+        background-color: green;
+        border-radius: 50%;
+        height: 60px;
+        width: 60px;
+
+        box-shadow: inset 0 0 0 7px rgba(255,255,255,.5);
+
+        margin: 2px;
     }
 
     &__button:hover {
@@ -56,7 +82,7 @@
     }
 
     &__prev {
-        position: absolute;
+        // position: absolute;
 
         margin: 1px 10px 0px 0px; /* N E S W */ 
         font-size: 20px;
@@ -67,10 +93,15 @@
 #clear {
     background-color: red;
     border-radius: 5px;
+    padding: 10px;
+    margin: 5px 10px;
+
+    box-shadow: inset 0 0 0 7px rgba(255,255,255,.5);
 }
 
-#stupid-font-awesome {
+.stupid-font-awesome {
+
     font-weight: 900;
     font-size: 30px;
-
+    font-family: seven_segmentregular;
 }
