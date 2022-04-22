@@ -9,7 +9,6 @@ const clearButton = document.getElementById("clear");
     const a = [];
     let mod = "";
     const b = [];
-    const operation = [];
 
 // Function called on each button press
 const handleButtonPress = (e) => {
@@ -17,7 +16,6 @@ const handleButtonPress = (e) => {
 
     // Store value of which button was pressed for ease of referral
     const userInput = e.currentTarget.id;
-    // console.log(`Key Pressed: ${userInput}`);
 
     // Activate only when OPERATION is selected
     if (userInput === "+" ||
@@ -25,7 +23,6 @@ const handleButtonPress = (e) => {
         userInput === "/" ||
         userInput === "*") {
         mod = userInput;
-        // console.log(`Mod: ${mod}`);
         // Update HTML with value of first number and the arithmatic operation
         readout.innerHTML = "";
         prevReadout.innerHTML = `${a.join("")} ${mod}`;
@@ -39,7 +36,6 @@ const handleButtonPress = (e) => {
         userInput !== "*" &&
         userInput !== "=") {
         a.push(userInput);
-        // console.log(`A:: ${a}`);
         readout.innerHTML = `${a.join("")}`;
     }
 
@@ -51,7 +47,6 @@ const handleButtonPress = (e) => {
         userInput !== "*" &&
         userInput !== "=") {
         b.push(userInput);
-        // console.log(`B:: ${b}`);
         // Update HTML with value of first number and the arithmatic operation
         prevReadout.innerHTML = `${a.join("")} ${mod}`;
         // Update HTML with value of second number
